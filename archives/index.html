@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 
 
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
   <meta charset="utf-8" />
-    
+   
+  <meta name="keywords" content="生活，旅行，思考，代码，博客" />
+   
+  <meta name="description" content="告别一段时光，开启一段旅程" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Archives |  Hexo
+    归档 |  Coins
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -45,7 +49,7 @@
   <article class="articles">
     
     
-    <h1 class="page-type-title">Archives</h1>
+    <h1 class="page-type-title">归档</h1>
     
     
   
@@ -106,9 +110,9 @@
         
         
         <span>
-  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></s>
   <span class="division">|</span>
-  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
 </span>
         
       </li>
@@ -125,6 +129,24 @@
       </li>
     </ul>
   </div>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("08/10/2018 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
 </footer>
       <div class="float_btns">
         <div class="totop" id="totop">
@@ -142,7 +164,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="Coins"></a>
   </div>
   
   <ul class="nav nav-main">
@@ -168,7 +190,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="http://shenyu-vip.lofter.com" target="_blank" rel="noopener">摄影</a>
+      <a class="nav-item-link" href="/null">摄影</a>
     </li>
     
     <li class="nav-item">
@@ -181,7 +203,7 @@
   <ul class="nav">
     <li class="nav-item">
       
-      <a class="nav-item-link nav-item-search"  title="Search">
+      <a class="nav-item-link nav-item-search"  title="搜索">
         <i class="ri-search-line"></i>
       </a>
       
